@@ -28,9 +28,18 @@ class CompaniesController < ApplicationController
     if @company.update(company_params)
       redirect_to companies_path, notice: "Changes Saved"
     else
+      flash[:alert] = @company.errors.full_messages.join(",")
       render :edit
     end
-  end  
+  end
+
+  def destroy
+    if @company.destroy
+      redirect_to companies_path, notice: "Company Deleted successfully"
+    else
+      redirect_to company_path(@company)
+    end
+  end
 
   private
 
@@ -49,5 +58,5 @@ class CompaniesController < ApplicationController
   def set_company
     @company = Company.find(params[:id])
   end
-  
+
 end

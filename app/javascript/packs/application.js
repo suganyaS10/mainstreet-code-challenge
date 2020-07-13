@@ -7,6 +7,7 @@ require("@rails/ujs").start();
 require("turbolinks").start();
 require("@rails/activestorage").start();
 require("channels");
+require("jquery")
 
 require("trix");
 require("@rails/actiontext");
@@ -20,3 +21,17 @@ import "css/site";
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+$(document).ready(function() {
+  var email_error_el = $('#mainstreet-email-error');
+
+  $('form').on('change', '#mainstreet-email', function() {
+    var email = $('#mainstreet-email').val();
+    if(email && !(/@getmainstreet.com\s*$/.test(email))) {
+      $(email_error_el).show();
+    }
+    else{
+      $(email_error_el).hide();
+    }
+  })
+});

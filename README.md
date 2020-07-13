@@ -2,7 +2,7 @@
 
 Welcome to the Main Street code challenge. This repository includes a very basic rails app to be used to assessment and testing purposes only.
 
-Note: This codebase is not nearly or fully representative of our platform however it's a good small sample of the kinds of technology and problems we are solving. 
+Note: This codebase is not nearly or fully representative of our platform however it's a good small sample of the kinds of technology and problems we are solving.
 
 ## Getting Started
 
@@ -27,11 +27,11 @@ Once that runs you should be able to run the following 2 commands in separate te
 
 ### ☐ Add a way to delete companies
 
-For companies, there isn't currently a way to destroy them. There should be a confirmation of the action. Some kind of "Are you sure?" message.
+For companies, there isn't currently a way to destroy them. There should be a confirmation of the action. Some kind of "Are you sure?" message. - Done
 
 ### ☐ Add Custom Validation to company email Address (When Present)
 
-All email addresses for new companies should only be a @getmainstreet.com domain. A custom error should render when attempting to create or update a company when the email does not match this domain. This should only be when email is present. Blank emails can be ignored.
+All email addresses for new companies should only be a @getmainstreet.com domain. A custom error should render when attempting to create or update a company when the email does not match this domain. This should only be when email is present. Blank emails can be ignored. - Done
 
 ### ☐ Add City State To Companies from Zip Code.
 
@@ -39,8 +39,8 @@ For each company "Show" page there is a placeholder for the City, State for that
 
 Every time the company's zip code is updated this city and state should be updated.
 
-The City and State should be added as attributes to the Company object.
+The City and State should be added as attributes to the Company object. - Done. A rake task is added in bin/setup to prepopulate for existing Companies.
 
 ### ☐ Include test coverage for all your changes
 
-For all functionality extend or add tests from existing tests.
+For all functionality extend or add tests from existing tests. - Done

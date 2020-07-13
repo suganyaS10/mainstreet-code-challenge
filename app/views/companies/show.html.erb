@@ -6,13 +6,14 @@
     </div>
     <div class="col text-right">
       <%= link_to "Edit", edit_company_path %>
+      <%= link_to "Delete", company_path(@company), class: "delete-exp", title: 'Delete', method: :delete, 'data-confirm' => 'Are you sure you want to delete this company?' %>
     </div>
   </div>
   <div class="bg-success">
     <div class="container p-5 text-white">
       <h1><%= @company.name %></h1>
       <h3>City, State</h3>
-      <pre>☝️ This is what needs to be udpated. Examples: Atlanta, GA or Nashvile, TN</pre>
+      <pre><%= (@company.city || 'N/A') + ',' + (@company.state || 'N/A') %></pre>
     </div>
   </div>
   <% if @company.description.present? %>
